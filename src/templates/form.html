@@ -1,0 +1,20 @@
+ {% extends 'base.html'%}
+
+{% block head_title %} {{title}}|{{block.super}}{% endblock head_title %}
+
+{% block content%}
+
+<h1>{{title}}</h1>
+{% if form.errors.non_field_errors %}
+{{form.errors.non_field_errors}}
+{%endif%}
+
+{%include 'snippets/form-snippet.html'%}
+
+
+{% endblock%} 
+
+<!-- 
+<input type="text" name="name" placeholder="Your title"></br>
+	<input type="text" name="location" placeholder="location"></br>
+	<input type="text" name="Category" placeholder="category"></br> -->

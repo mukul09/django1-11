@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Search Result
+	</title>
+</head>
+<body>
+	<h1>
+		{% for qs in queryset%}
+			{{qs.name}}</br>
+			{{qs.category}}</br>
+			{{qs.location}}
+
+		{%endfor%}
+
+
+	</h1>
+</body>
+</html>

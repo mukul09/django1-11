@@ -1,0 +1,16 @@
+ {% extends 'base.html'%}
+
+{% block head_title %} Restaurants|{{block.super}}{% endblock head_title %}
+
+{% block content%}
+<h1>My Restaurant <small><a href='{%url "restaurants:create"%}'>Add</a></small>
+</h1>
+ <ul>
+{% for o in object_list%}
+<li><a href='{{o.get_absolute_url}}'>{{o}}</a><br/> 
+
+{{o.location}} {{o.category}} {{o.timestamp}} {{o.updated}}</li>
+{% endfor%}
+</ul>
+
+{% endblock%} 

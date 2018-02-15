@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Hello World</h1>
+<h3> {{block.super}}</h3>
+
+<p>
+	{% if num is not None%}
+	Random Number is {{num}}
+	{%endif%}
+</p>
+
+<p>
+{% for some_item in some_list %}
+    {% if some_item|divisibleby:"2" %}
+            Even number
+    {% endif %}
+    
+    {{ some_item }}<br/>
+
+{% endfor %}
+
+<!-- {% for x,y in points%}
+<p> These points are {{x}}, {{y}}
+</p>
+{% endfor %} -->
+{% with section="mukul"%}
+{% ifequal 'mukul' 'mukul'%}
+<p> MySite </p>
+{% endifequal%}
+{% endwith%}
+
+{% endblock content %}
